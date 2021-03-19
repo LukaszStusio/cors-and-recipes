@@ -1,0 +1,136 @@
+:root {
+  --color-0: rgb(0, 0, 0);
+  --color-02: rgba(0, 0, 0, 0.6);
+  --color-1: #ffdb59;
+  --color-3: #00bf3a;
+  --background-color: #fcfce3;
+  --background: url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z' fill='%23000000' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: "Inconsolata", monospace;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* layout */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*  */
+
+body {
+  background: var(--background);
+  border: 5px solid var(--color-0);
+  letter-spacing: 2px;
+  max-width: 1100px;
+  margin: 0rem auto;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        margin: 1rem auto;
+    }
+    html {
+    padding: 0 1rem;
+  }
+}
+
+.main-box {
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--color-3);
+    align-items: center;
+}
+.input {
+    letter-spacing: 5px;
+}
+
+.submit {
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 700;
+    border: 5px solid var(--color-0);
+    box-shadow: 0px 5px 5px 0px var(--color-02);
+    background: var(--color-1);
+    transition: all 0.1s linear;
+    transform: translateZ(0);
+    transition: all 0.1s linear;
+    transform: translateZ(0);
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    width: 300px;
+}
+
+.submit[disabled] {
+    opacity: 0.6;
+    background: url(img/noise-pixels.gif);
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit:active {
+    box-shadow: none;
+    transform: translate3d(0px, 2px, 0);
+}
+
+.box {
+    margin: 1rem;
+}
+
+input {
+    border: 5px solid var(--color-0);
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+}
+
+.marked {
+  border: 2px solid var(--color-0);
+  padding: 1px 5px;
+  background-color: var(--background-color);
+  box-shadow: 0px 5px 5px 0px var(--color-02);
+}
+
+.recipes {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.recipe {
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.5rem 2rem;
+  border: 5px solid var(--color-0);
+  box-shadow: 0px 5px 5px 0px var(--color-02);
+  background: var(--color-1);
+}
+
+.circle {
+  border: 5px solid var(--color-0);
+  border-radius: 50%;
+}
+
+.recipe-link {
+  text-decoration: none;
+}

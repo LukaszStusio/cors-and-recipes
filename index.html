@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+
+    <meta name="robots" content="noindex" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="img/lightning.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inconsolata:400,700,900&amp;subset=latin-ext"
+    />
+  </head>
+  <body>
+    <main class="main-box">
+      <header class="box">
+        <h1>Recipes</h1>
+        <p>Video #75</p>
+        <p>
+          <strong>Note:</strong> Sometimes it may not work as this particular
+          API has too many requests. In such a case please wait few minutes.
+        </p>
+      </header>
+      <form class="search" action="" autocomplete="off">
+        <input class="input" type="text" name="query" value="pizza" />
+        <button class="submit" name="submit">Submit</button>
+      </form>
+      <article style="line-height: 2;" class="box">
+        <strong class="marked">CORS Policy</strong> - Cross Origin Resource
+        Sharing Policy: by default you're not allowed to share data between
+        origins like two websites.
+      </article>
+      <article class="recipes box"></article>
+    </main>
+    <script src="recipes.js"></script>
+  </body>
+</html>
