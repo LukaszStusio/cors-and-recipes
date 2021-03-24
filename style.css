@@ -70,8 +70,6 @@ body {
     background: var(--color-1);
     transition: all 0.1s linear;
     transform: translateZ(0);
-    transition: all 0.1s linear;
-    transform: translateZ(0);
     padding: 1rem;
     margin: 0 1rem 1rem 1rem;
     width: 300px;
