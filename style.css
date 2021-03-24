@@ -29,10 +29,6 @@ html::-webkit-scrollbar {
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /*  */
 
 body {
@@ -42,6 +38,8 @@ body {
   max-width: 1100px;
   margin: 0rem auto;
   font-weight: 700;
+  box-sizing: border-box;
+
 }
 
 @media screen and (min-width: 700px) {
@@ -119,18 +117,43 @@ input {
 
 .recipe {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0.5rem 2rem;
   border: 5px solid var(--color-0);
   box-shadow: 0px 5px 5px 0px var(--color-02);
   background: var(--color-1);
 }
 
-.circle {
+.recipe h2 {
+  min-height: 5rem;
+}
+
+.ingredients {
+  min-height: 12rem;
+}
+
+.figure-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+figure {
   border: 5px solid var(--color-0);
-  border-radius: 50%;
+  box-shadow: 0px 5px 5px 0px var(--color-02);
+  background: var(--background-color);
+}
+
+.circle {
+  padding: 0.5rem;
 }
 
 .recipe-link {
+  text-align: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-link > a {
   text-decoration: none;
 }

@@ -1,7 +1,7 @@
 console.log('Works fine.');
 
-const proxy = `https://cors-anywhere.herokuapp.com/`;
-const baseEndpoint = `http://www.recipepuppy.com/api/`;
+const proxy = 'https://cors-anywhere.herokuapp.com/';
+const baseEndpoint = 'http://www.recipepuppy.com/api/';
 const form = document.querySelector('form.search');
 const recipesGrid = document.querySelector('.recipes');
 
@@ -17,12 +17,19 @@ function displayRecipes(recipes) {
         recipe =>
         `<section class="recipe flex">
             <h2>${recipe.title}</h2>
-            <p>${recipe.ingredients}</p>
-            <a class="recipe-link marked" href="${recipe.href}">View recipe</a>
-            ${recipe.thumbnail &&
-                `<img class="circle" width="80px" height="80px" src="${recipe.thumbnail}"
-                alt="${recipe.title}"/>`
-            }
+            <p class="ingredients">${recipe.ingredients}</p>
+            <div class="figure-wrapper">
+                <figure>
+                    ${recipe.thumbnail ?
+                        `<img class="circle" title="${recipe.title}" width="100px" height="100px" src="${recipe.thumbnail}"
+                        alt="${recipe.title}"/>` : `<img class="circle" width="100px" height="100px" src="img/poo.png"
+                        title="no image available" alt="no image available"/>`
+                    }
+                </figure>
+                <div class="recipe-link marked">
+                <a href="${recipe.href}">View recipe</a>
+                </div>
+            </div>
         </section>`
     );
     recipesGrid.innerHTML = html.join('');
